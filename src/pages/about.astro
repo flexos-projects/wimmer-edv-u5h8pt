@@ -1,0 +1,23 @@
+---
+import { SomeComponent } from '../components/NonExistent.astro'
+import { formatDate } from 'non-existent-package'
+
+interface Props {
+  title: string
+  count: number
+}
+
+const props: Props = Astro.props
+const result: number = "this is not a number"
+const items: string[] = [1, 2, 3]
+---
+<html lang="en">
+<head>
+  <title>{props.title}</title>
+</head>
+<body>
+  <SomeComponent />
+  <p>{formatDate(new Date())}</p>
+  <p>Count: {result + items}</p>
+</body>
+</html>

@@ -1,6 +1,4 @@
 ---
-import { SomeComponent } from '../components/NonExistent.astro'
-import { formatDate } from 'non-existent-package'
 
 interface Props {
   title: string
@@ -16,8 +14,6 @@ const items: string[] = [1, 2, 3]
   <title>{props.title}</title>
 </head>
 <body>
-  <SomeComponent />
-  <p>{formatDate(new Date())}</p>
   <p>Count: {result + items}</p>
 </body>
 </html>

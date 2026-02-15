@@ -1,60 +1,57 @@
 ---
-id: "001-vision"
-title: "Vision & Strategy"
 type: doc
 subtype: core
-status: draft
-sequence: 1
-tags: [vision, strategy, personas]
+title: 001-vision.md - Project Vision
 ---
 
-# Vision & Strategy
+### 1. The Transformation: From Digital Relic to Enterprise Authority
 
-> The north star document. Defines what this product is, who it's for, and why it matters. Everything else flows from here.
+This project is a strategic resurrection. We are transforming Wimmer EDV's digital presence from a forgotten relic that actively undermines their credibility into a sharp, modern, and authoritative platform that truly reflects their 27 years of deep enterprise expertise. The old site projects dormancy; the new site will project **competence, stability, and forward-thinking vision**. We will bridge the massive gap between their real-world skill and their digital identity, turning the website into their most powerful tool for establishing trust and generating high-value leads.
 
-## Vision Statement
+### 2. Target Audiences
 
-A clear, aspirational statement about what this product will become. Not a feature list — a future state. What does the world look like when this product succeeds?
+We are speaking to decision-makers managing complex, high-stakes IT environments.
 
-## Mission
+*   **The Legacy System Leader (CTO/IT Director):** Manages a medium-to-large enterprise running on mission-critical IBM AS/400 or Microsoft Dynamics AX. They are risk-averse, value stability, but are under pressure to modernize, integrate with cloud services, or ensure business continuity. They need an expert who speaks their language and understands the immense cost of failure.
+*   **The Growth-Focused Executive (CFO/CEO):** Leads a successful, established company. They don't know the technical details, but they understand risk. They need a partner to ensure their core business systems are secure, reliable, and can support future growth. Their primary concern is data protection and disaster recovery.
+*   **The Next-Generation Successor:** A younger leader who has inherited a business with powerful but aging technology. They need a trusted guide to help them navigate the complexities of modernization without disrupting the business. They are looking for a firm that can bridge the old and the new.
 
-The practical version of the vision. What does this product DO, day to day, for its users? One sentence that anyone on the team can repeat.
+### 3. The First 3-Second Feeling: "Finally. Experts."
 
-## Problem
+Upon arrival, the visitor should feel an immediate sense of **relief and confidence**. The clean, structured design, professional language, and clear focus on enterprise technologies should instantly communicate:
+*   "This is a serious, professional consulting firm."
+*   "They understand my complex systems."
+*   "They are modern, trustworthy, and still in business."
 
-What pain point does this solve? Be specific — not "people need better tools" but "freelance photographers lose 3 hours per week chasing clients for gallery approvals." Include evidence if available.
+The immediate impression must be one of **calm, intelligent authority.**
 
-## Solution
+### 4. Success Metrics That Matter
 
-How does this product solve the problem? The elevator pitch. What's the core mechanism that makes things better?
+Our goal is to generate qualified inquiries for high-value consulting projects.
+*   **Primary Metric:** Number of qualified "Request a Consultation" form submissions for projects related to ERP, legacy modernization, and data protection.
+*   **Secondary Metrics:**
+    *   Direct phone calls initiated from the website.
+    *   Increase in search rankings for core expertise keywords.
+    *   Time spent on Case Study and Service pages, indicating deep engagement.
 
-## Target Users
+### 5. Content Strategy: Frame Legacy as a Modern Asset
 
-### Primary Persona
+Our content will not be a simple brochure; it will be a resource that builds authority and trust. The core strategy is to position their deep historical knowledge as an invaluable asset for today's challenges.
 
-Describe the main user in detail — their role, frustrations, goals, technical comfort level, and what "success" looks like for them. Give them a name.
+*   **Service Pages as Solutions:** Frame services around solving high-stakes business problems: "Modernize Your AS/400 without Disruption," "Secure Your Enterprise Data with Veeam," "Strategic ERP Consulting for Growth."
+*   **Case Studies as Proof:** Develop detailed case studies (anonymized if necessary) that follow a "Challenge -> Solution -> Result" framework, demonstrating tangible business value.
+*   **"Insights" Section:** A thought leadership blog addressing the specific concerns of our target audience. Topics like:
+    *   *The CTO's Guide to Migrating from Dynamics AX to Dynamics 365.*
+    *   *Integrating Your IBM iSeries with Modern Cloud APIs.*
+    *   *3 Disaster Recovery Scenarios Your Veeam Backup Can Solve.*
 
-### Secondary Personas
+### 6. SEO Ambitions: Own the High-Value Niche
 
-Other user types who benefit from the product. Admins, managers, collaborators, viewers — whoever else interacts with the system.
+We will dominate search results for the specific, high-intent keywords that our ideal clients use. Our ambition is to be the #1 result in Austria for:
+*   `microsoft dynamics ax support österreich`
+*   `as/400 consulting austria`
+*   `ibm iseries experten wels`
+*   `veeam backup consulting oberösterreich`
+*   `erp beratung für mittelständische unternehmen`
 
-## Unique Value Proposition
-
-What makes this different from alternatives? Not just "better UI" — what's the structural advantage? Why will users switch from what they're doing now?
-
-## Success Metrics
-
-How do we know this is working? Define 3-5 measurable outcomes:
-
-- **Activation:** (what does a successful first session look like?)
-- **Engagement:** (what does regular usage look like?)
-- **Retention:** (what keeps users coming back?)
-- **Growth:** (how does the product spread?)
-
-## Non-Goals
-
-Equally important: what is this product NOT? What features, markets, or approaches are explicitly out of scope? This prevents scope creep and keeps the team focused.
-
-## Competitive Landscape
-
-What alternatives exist? Direct competitors, indirect substitutes, and the "do nothing" option. Where does this product fit in the market?
+We will achieve this through technically perfect on-page SEO, targeted content, and building authority in this specialized niche.

@@ -1,59 +1,37 @@
 ---
-id: "002-features"
-title: "Feature Inventory"
 type: doc
 subtype: core
-status: draft
-sequence: 2
-tags: [features, mvp, scope]
+title: 002-features.md - Feature Inventory
 ---
 
-# Feature Inventory
+This inventory is focused on delivering immediate credibility and generating qualified leads for Wimmer EDV's high-value consulting services.
 
-> The complete list of what this product can do, organized by priority. This is the single source of truth for product scope.
+### P1: Launch Essentials (Must-Have for Relaunch)
 
-## Priority Framework
+These features are non-negotiable for establishing the brand's credibility and core business function.
 
-Features are classified into three tiers:
+*   **Responsive, Professional Design:** A fully modern, mobile-first design that is fast, clean, and communicates enterprise-level competence.
+*   **Detailed Service Pages:** Unique, structured pages for each core offering (e.g., AS/400 Modernization, Dynamics AX Support, Veeam Data Protection). Each page must detail the service, its business value, and their approach.
+*   **Compelling "About Us" Page:** Tells the "Since 1997" story, emphasizing stability, experience, and the company's philosophy. This is a primary trust-builder.
+*   **High-Intent "Request a Consultation" Form:** A detailed contact form designed to pre-qualify leads. It will ask for more than just name/email; it should include fields for "Current System," "Project Goals," and "Company Size" to filter for serious inquiries.
+*   **"Client Success" / Case Study Section:** A dedicated page to showcase their work. Even if it launches with only one or two case studies (or a "Coming Soon" promise), the existence of the section itself signals a focus on results.
+*   **Partner Logo Showcase:** A prominent section on the homepage and a dedicated part of the "About Us" page to display logos of key partners like Microsoft and Veeam.
+*   **Standard Legal Pages:** Impressum (Imprint) and Datenschutz (Privacy Policy) that are easily accessible and legally compliant.
+*   **Click-to-Call Functionality:** All phone numbers must be tappable on mobile devices for immediate contact.
 
-- **P0 (Must Have):** The product doesn't work without these. Ship in MVP.
-- **P1 (Should Have):** Important for a good experience. Ship in v1.1.
-- **P2 (Nice to Have):** Delightful but not essential. Ship when capacity allows.
+### P2: Month 1-3 (Post-Launch Enhancements)
 
-## P0 Features (MVP)
+Once the core site is live and stable, we focus on deepening engagement and building authority.
 
-List every feature that must exist for the product to be viable. For each:
+*   **Populate Case Studies:** Work with the client to write and publish at least 3-5 detailed case studies, making this the most compelling section of the site.
+*   **"Our Team" Page/Section:** Introduce the founder and key consultants with professional photos and bios. This adds a crucial human element and showcases the depth of the team's expertise.
+*   **"Insights" Blog Launch:** Publish the first 3-5 thought leadership articles based on the content strategy. This begins the long-term SEO and authority-building effort.
+*   **Testimonial Integration:** Weave short, powerful client quotes throughout the homepage and relevant service pages.
 
-- **Name:** Short, descriptive name
-- **Description:** What it does in 2-3 sentences
-- **User Stories:** "As a [user], I want to [action] so that [benefit]"
-- **Acceptance Criteria:** How do we know it's done?
-- **Dependencies:** Other features this requires
-- **Pages:** Which pages surface this feature
+### P3: Future Roadmap (6-12 Months)
 
-## P1 Features
+Long-term features to expand the site's role as a marketing asset.
 
-Features that make the product good, not just functional. Same format as P0.
-
-## P2 Features
-
-Features that delight. Same format as P0.
-
-## Feature-to-Page Matrix
-
-A grid showing which features appear on which pages. This reveals gaps — pages with no features, features with no pages.
-
-| Feature | Landing | Dashboard | Settings | Profile |
-|---------|---------|-----------|----------|---------|
-| (list features vs pages) | | | | |
-
-## MVP Scope
-
-Summarize the exact scope of the first release. What's in, what's out, and why. Include estimated complexity (S/M/L) for each P0 feature.
-
-## Feature Dependencies
-
-Which features depend on others? Draw the dependency graph as a list:
-
-- Feature A requires Feature B (because...)
-- Feature C requires Feature A and Feature D
+*   **Gated Content (Whitepapers/Guides):** Create in-depth guides (e.g., "The Complete Guide to AS/400 Modernization") available for download in exchange for a business email. A powerful lead-generation tool for the top of the funnel.
+*   **Service-Specific Landing Pages:** Develop stripped-down landing pages for specific digital ad campaigns (e.g., a page focused solely on "Dynamics AX to D365 Migration").
+*   **Webinar/Event System:** A simple system to announce and manage sign-ups for educational webinars targeting their niche audience.

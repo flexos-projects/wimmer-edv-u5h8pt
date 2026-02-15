@@ -1,99 +1,60 @@
 ---
-id: "007-technical"
-title: "Technical Architecture"
 type: doc
 subtype: core
-status: draft
-sequence: 7
-tags: [technical, architecture, stack, deployment]
+title: 007-technical.md - Technical Architecture
 ---
 
-# Technical Architecture
+This document outlines the technical specifications for the Wimmer EDV website redesign, prioritizing performance, SEO, and maintainability.
 
-> How the product is built, deployed, and maintained. The engineer's reference document.
+### 1. Core Stack
 
-## Tech Stack
+*   **Framework:** **Astro**. Chosen for its exceptional performance-by-default (zero JS on the client-side unless explicitly needed) and content-focused architecture. It is ideal for building fast, SEO-friendly marketing websites.
+*   **Deployment:** **Vercel**. Provides a seamless CI/CD pipeline, automatic HTTPS, global CDN, and serverless functions for handling backend tasks like form submissions.
+*   **Content Management:** **Markdown/MDX Files in Git Repository**. For this project's scale, a full-featured CMS is overkill. Content will be managed directly in the project's Git repository using Markdown files with YAML frontmatter, following the defined content model. This is simple, version-controlled, and extremely fast.
 
-| Layer | Technology | Why |
-|-------|-----------|-----|
-| Framework | Nuxt 4 | Full-stack Vue, SSR, file-based routing |
-| Database | Firestore | Real-time, serverless, scales automatically |
-| Auth | Firebase Auth | Email/password, social login, session management |
-| Hosting | Vercel | Edge deployment, preview deploys, serverless functions |
-| Storage | Vercel Blob | File uploads, images, assets |
-| Styling | UnoCSS / Tailwind | Utility-first, design token integration |
+### 2. Performance Targets
 
-## Architecture Overview
+The site must be exceptionally fast to establish credibility.
+*   **Google Lighthouse Score:** Target >95 across all categories (Performance, Accessibility, Best Practices, SEO).
+*   **Core Web Vitals:** All metrics (LCP, FID, CLS) must pass in the "Good" category.
+*   **Load Time:** Largest Contentful Paint (LCP) under 1.5 seconds on a standard mobile connection.
 
-Describe the high-level architecture — client/server split, data flow, caching strategy.
+### 3. SEO & Metadata
 
-### Client
+Technical SEO will be flawless from day one.
+*   **Structured Data:** Implement `Organization` and `Service` Schema.org JSON-LD structured data across the site. Case studies will use `Article` schema. This provides rich context for search engines.
+*   **Sitemap:** An `sitemap.xml` file will be automatically generated at build time to include all canonical page URLs.
+*   **Robots.txt:** A correctly configured `robots.txt` will be in place to guide search engine crawlers.
+*   **Meta Tags:** All pages will have unique, SEO-optimized `<title>` and `<meta name="description">` tags, as defined in the Page Architecture document.
+*   **Open Graph & Twitter Cards:** Implement OG and Twitter tags for rich social media sharing previews on all pages.
+*   **Canonical URLs:** All pages will have a self-referencing `rel="canonical"` link to prevent duplicate content issues.
 
-- Nuxt 4 SPA with SSR for public pages
-- Vue 3 Composition API throughout
-- State management via composables (not Pinia unless complex)
-- File-based routing with middleware for auth gates
+### 4. Form Handling
 
-### Server
+*   **Implementation:** Use a Vercel Serverless Function to process form submissions.
+*   **Process:**
+    1.  The user submits the form.
+    2.  The request is sent to the serverless function endpoint.
+    3.  The function performs basic validation and spam checking (e.g., using a honeypot field).
+    4.  On success, the function sends a formatted email notification to the Wimmer EDV contact email address.
+    5.  The function returns a success response to the frontend, which displays a "Thank you" message.
 
-- Nuxt server routes (server/api/)
-- Firebase Admin SDK for privileged operations
-- Server-side rendering for SEO-critical pages
-- Edge functions for API routes
+### 5. Asset Optimization
 
-### Data Flow
+*   **Images:** Utilize Astro's built-in `<Image>` component. This will automatically generate optimized `webp` and `avif` formats, create responsive `srcset` attributes, and lazy-load all off-screen images.
+*   **CSS/JS:** All CSS and JavaScript will be bundled and minified at build time. Critical CSS will be inlined in the `<head>` for the fastest possible initial render.
 
-```
-Client → Nuxt Server Routes → Firestore
-         ↕                     ↕
-      Firebase Auth         Cloud Functions (if needed)
-```
+### 6. Analytics & Tracking
 
-## API Routes
+*   **Platform:** **Google Analytics 4 (GA4)**.
+*   **Implementation:** GA4 will be implemented via **Google Tag Manager (GTM)**. This allows for flexible event tracking without requiring new code deployments.
+*   **Tracked Events:**
+    *   "Request a Consultation" form submissions.
+    *   Clicks on email addresses (`mailto:` links).
+    *   Clicks on phone numbers (`tel:` links).
+    *   Downloads of any future gated content (e.g., PDFs).
 
-List every API endpoint the product needs:
+### 7. Language & Internationalization
 
-| Method | Path | Purpose | Auth |
-|--------|------|---------|------|
-| POST | /api/auth/login | Authenticate user | No |
-| GET | /api/[resource] | List resources | Yes |
-| POST | /api/[resource] | Create resource | Yes |
-| (continue...) | | | |
-
-## Authentication
-
-- **Method:** Firebase Auth (email/password + Google OAuth)
-- **Session:** HTTP-only cookie with Firebase session token
-- **Middleware:** `auth.ts` middleware checks session on protected routes
-- **Token refresh:** Automatic via Firebase SDK
-
-## Environment Variables
-
-| Variable | Purpose | Required |
-|----------|---------|----------|
-| `FIREBASE_PROJECT_ID` | Firebase project | Yes |
-| `FIREBASE_CLIENT_EMAIL` | Service account | Yes |
-| `FIREBASE_PRIVATE_KEY` | Service account | Yes |
-| (continue...) | | |
-
-## Deployment
-
-- **Production:** Vercel, auto-deploy from `main` branch
-- **Preview:** Vercel preview deploys on every PR
-- **Database:** Firestore production instance
-- **CI/CD:** GitHub Actions for linting, type-checking, tests
-
-## Performance Targets
-
-- **First Contentful Paint:** < 1.5s
-- **Time to Interactive:** < 3s
-- **Lighthouse Score:** > 90 (performance, accessibility)
-- **API Response Time:** < 200ms (p95)
-
-## Security Considerations
-
-- All API routes validate input (Zod schemas)
-- Firestore security rules enforce per-document access
-- CORS configured for production domain only
-- Rate limiting on auth endpoints
-- No secrets in client bundle
+*   **Primary Language:** The site will be built as a single-language site in German (`de-AT`). The `<html>` tag will be set to `lang="de-AT"`.
+*   **Future-Proofing:** While not a P1 requirement, the Astro project structure will be organized to easily accommodate future language additions if necessary.

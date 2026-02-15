@@ -1,41 +1,37 @@
 ---
-id: "000-import"
-title: "Project Origin"
 type: doc
 subtype: core
-status: draft
-sequence: 0
-tags: [origin, provenance]
+title: 000-import.md - Source Data Summary
 ---
 
-# Project Origin
+### 1. Verified Facts (Wimmer Consulting GmbH, Schleissheim)
 
-> Every FlexOS project has an origin story. This document records how the project was created and what source material informed it.
+This project exclusively concerns **Wimmer Consulting GmbH**, located at Verdistrasse 23, A-4600 Schleissheim, Austria, the entity associated with the domain `wimmer-edv.at`.
 
-## Source
+*   **Identity:** Wimmer Consulting GmbH
+*   **Location:** Schleissheim, Austria
+*   **Founded:** 1997 in Wels (~27 years of operation)
+*   **Legal:**
+    *   VAT ID (UID): ATU44968102
+    *   Company Register (Firmenbuch): FN170277h
+*   **Core Expertise (derived from current site):**
+    *   **Legacy Systems:** Deep specialization in IBM AS/400 (iSeries, System i) and RPG programming.
+    *   **Enterprise ERP:** Implementation and consulting for Microsoft Dynamics AX.
+    *   **Modern Data Protection:** Expertise in Veeam Backup & Replication for VMware and Hyper-V environments.
+    *   **General IT Services:** IT Consulting, Custom Development, Networking.
+*   **Implied Partnerships:** Microsoft (Dynamics), Veeam.
+*   **Operational Narrative:** A company with deep roots in complex, on-premise, mission-critical enterprise systems for medium-to-large businesses. Their story is one of stability, longevity, and rare technical expertise.
 
-Describe how this project came into existence. Was it imagined from a description? Imported from an existing GitHub repository? Scraped from a live website? Created from a template?
+### 2. Data Quality & Critical Gaps
 
-- **Type:** imagination | github_import | website_scrape | blank | template
-- **Source:** (URL, description, or "from scratch")
-- **Date:** (when the project was created)
+The quality of the available data is low and entirely derived from an extremely outdated website (copyright 1997-2011). The project's success is critically dependent on filling these gaps through client interviews.
 
-## Original Input
+*   **[GAP] Updated Service Portfolio:** The current service list is over a decade old. We have **no information** on their current offerings. Do they support modern Microsoft ERPs (Dynamics 365)? Do they offer Azure/cloud services? What is their cybersecurity posture? This is the most critical information gap.
+*   **[GAP] Social Proof:** There is a **total absence** of client testimonials, logos, case studies, or success stories. This is the biggest credibility weakness to overcome.
+*   **[GAP] Human Element:** The business is faceless. We have **no names, photos, or biographies** for the founder or key team members.
+*   **[GAP] Target Client Profile:** Beyond "medium to large enterprises," we have no specific information on the industries they serve or the typical roles of their client contacts (e.g., CTO, IT Manager, CFO).
+*   **[GAP] Project Details:** The "what they do" is high-level. We have **no concrete examples** of the problems they have solved or the results they have achieved for clients.
 
-Capture the raw input that started this project — the brain dump, the GitHub URL, the website, or the template name. This is the seed everything else grew from.
+### 3. Discarded Data
 
-## What Was Learned
-
-If this project was imported or scraped, summarize the key insights extracted from the source material. What was the original project trying to be? What worked? What was missing?
-
-## Decisions Made
-
-Record any early decisions about scope, direction, or technology that were made during project creation. Why was this approach chosen over alternatives?
-
-## Provenance Chain
-
-If this project builds on previous work, link to the sources:
-
-- **Parent project:** (if forked or imported from another FlexOS project)
-- **External sources:** (GitHub repos, websites, documents that informed this)
-- **AI models used:** (which models generated the initial content)
+All research data pertaining to other companies named "Wimmer EDV" in Eferding, Wiesen, Pöls, and Schwanenstadt has been **permanently discarded**. It is irrelevant and would poison the redesign strategy with factually incorrect assumptions. Any conflicting information from the initial "Brand Brief" regarding a "local SMB provider" has also been superseded by the verified facts about Wimmer Consulting GmbH's enterprise focus.

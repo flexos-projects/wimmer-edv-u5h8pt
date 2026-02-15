@@ -1,73 +1,66 @@
 ---
-id: "004-database"
-title: "Database & Data Model"
 type: doc
 subtype: core
-status: draft
-sequence: 4
-tags: [database, schema, collections, data]
+title: 004-database.md - Content Model
 ---
 
-# Database & Data Model
+This content model defines the structured data needed to power the Wimmer EDV website, ensuring content is consistent, reusable, and optimized for SEO.
 
-> Every piece of data the product stores, how it's structured, and how it relates. This is the foundation for the backend.
+### **1. Service (`service`)**
+Defines a core service offering.
+*   `title`: Text (e.g., "IBM AS/400 & iSeries Consulting")
+*   `slug`: Text (URL-friendly version of the title)
+*   `category`: Select (Legacy System Modernization, Modern IT Infrastructure)
+*   `summary`: Text (Short description for overview pages)
+*   `heroImage`: Image
+*   `contentBlocks`: Repeater Field (Flexible content)
+    *   `Rich Text`: Formatted text for detailed descriptions.
+    *   `Key Features List`: List of specific offerings (e.g., "RPG Programming," "System Integration").
+    *   `CallToAction`: Headline, text, button text, button link.
+*   `relatedCaseStudies`: Relationship (Many-to-many link to `caseStudy` entries)
 
-## Database Choice
+### **2. Case Study (`caseStudy`)**
+Defines a client success story.
+*   `title`: Text (e.g., "ERP Modernization for Leading Austrian Manufacturer")
+*   `clientName`: Text (Anonymized if needed, e.g., "Führender österreichischer Maschinenbauer")
+*   `slug`: Text
+*   `publishDate`: Date
+*   `featuredImage`: Image
+*   `challenge`: Rich Text (The business problem the client faced)
+*   `solution`: Rich Text (How Wimmer EDV solved the problem)
+*   `results`: Rich Text (The tangible outcomes and benefits)
+*   `technologies`: Tags (e.g., "Dynamics AX", "AS/400", "Veeam")
+*   `testimonialQuote`: Text (A powerful quote from the client)
+*   `testimonialAuthor`: Text (Name/Title of the person quoted)
 
-Which database and why. Default: Firestore (NoSQL, real-time, serverless). Document any reasons to deviate.
+### **3. Team Member (`teamMember`)**
+Defines a person in the company.
+*   `name`: Text (e.g., "Ing. Christian Wimmer")
+*   `title`: Text (e.g., "Founder & Lead Consultant")
+*   `photo`: Image
+*   `bio`: Rich Text (Professional background and expertise)
+*   `areasOfExpertise`: Tags (e.g., "IBM iSeries", "ERP Architecture", "RPG")
 
-## Collection Inventory
+### **4. Partner (`partner`)**
+Defines a technology or certification partner.
+*   `name`: Text (e.g., "Veeam")
+*   `logo`: Image
+*   `websiteUrl`: URL
+*   `partnershipLevel`: Text (e.g., "Gold ProPartner", "Microsoft Certified Partner") - Optional
 
-List every collection/table in the system with a one-line description:
+### **5. Testimonial (`testimonial`)**
+A standalone client quote for use throughout the site.
+*   `quote`: Text (The client's statement)
+*   `authorName`: Text
+*   `authorTitle`: Text (e.g., "IT Director")
+*   `authorCompany`: Text
+*   `relatedService`: Relationship (Link to a `service` entry) - Optional
 
-| Collection | Description | Primary Key |
-|-----------|-------------|-------------|
-| `users` | User accounts and profiles | auto-generated |
-| (add collections...) | | |
-
-## Schema Definitions
-
-For each collection, define the full schema:
-
-### `users`
-
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| `id` | string | yes | Auto-generated document ID |
-| `email` | string | yes | User's email address |
-| `displayName` | string | yes | Display name |
-| `createdAt` | timestamp | yes | Account creation time |
-| `updatedAt` | timestamp | yes | Last modification time |
-
-(Continue for each collection...)
-
-## Relationships
-
-How do collections reference each other? Document every foreign key relationship:
-
-- `posts.userId` → references `users.id` (one-to-many: one user has many posts)
-- (continue for all relationships...)
-
-## Access Patterns
-
-What queries does the application need? This determines indexes and security rules:
-
-| Query | Collection | Filters | Sort | Used By |
-|-------|-----------|---------|------|---------|
-| Get user's posts | `posts` | `userId == x` | `createdAt desc` | Dashboard |
-| (add queries...) | | | | |
-
-## Security Rules
-
-Who can read/write what? Define per-collection:
-
-- **users:** Owner can read/write own doc. Others can read displayName only.
-- (continue for each collection...)
-
-## Indexes
-
-Based on access patterns, which composite indexes are needed?
-
-## Data Migration
-
-If this project was imported, document any data migration needs. What data exists in the old system? How does it map to the new schema?
+### **6. Global Settings (`settings`)**
+A singleton to hold site-wide information.
+*   `companyName`: Text (Wimmer Consulting GmbH)
+*   `address`: Text
+*   `phone`: Text
+*   `email`: Text
+*   `vatId (UID)`: Text
+*   `companyRegisterId (FN)`: Text
